@@ -35,6 +35,13 @@ header {
   color: #edece6;
   margin-left: 4px;
 }
+main {
+  padding: 30px 0;
+}
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
 footer {
   border-top: 1px solid #c7d1e2;
   padding: 30px 0 0 0;
