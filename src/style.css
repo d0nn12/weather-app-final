@@ -50,8 +50,12 @@ main {
 }
 .weather-app-details {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   color: #536168;
+  font-weight: 500;
+}
+.weather-app-details strong {
+  color: #dbddbd;
 }
 footer {
   border-top: 1px solid #c7d1e2;
