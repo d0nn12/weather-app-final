@@ -1,6 +1,8 @@
 body {
   background-color: #c7d1e2;
+  font-family: "Manrope", sans-serif;
 }
+
 .weather-app {
   background-color: #edece6;
   max-width: 600px;
