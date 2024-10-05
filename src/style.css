@@ -58,8 +58,8 @@ main {
   color: #d29c44;
 }
 .weather-app-icon {
-  font-size: 40px;
-  margin-top: 19px;
+  width: 88px;
+  height: 88px;
 }
 .weather-app-temperature-container {
   display: flex;
