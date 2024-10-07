@@ -19,6 +19,7 @@ function refreshWeather(response) {
                 src="${response.data.condition.icon_url}"
                 class="weather-app-icon"
               />`;
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -53,8 +54,13 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
-
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
+  console.log(response.data);
   let days = [`Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`];
   let forecastHtml = "";
 
@@ -82,4 +88,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Jacksonville");
-displayForecast();
